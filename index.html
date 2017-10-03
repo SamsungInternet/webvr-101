@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebVR 101</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.rawgit.com/aframevr/aframe/v0.5.0/dist/aframe-master.min.js"></script>
+    <script>
+      /* Step 4: Uncomment the following component */
+      /*
+      AFRAME.registerComponent('change-color-on-hover', {
+        schema: {
+          color: {default: 'red'}
+        },
+        init: function () {
+          var data = this.data;
+          var el = this.el;  // <a-box>
+          var defaultColor = el.getAttribute('material').color;
+          el.addEventListener('mouseenter', function () {
+            el.setAttribute('color', data.color);
+          });
+          el.addEventListener('mouseleave', function () {
+            el.setAttribute('color', defaultColor);
+          });
+        }
+      });
+      */
+    </script>
+  </head>
+  <body>
+    <!-- This is the base A-Frame element which contains all your 3D content. -->
+    <a-scene antialias="true" outline>
+      
+      <a-assets id="assets">
+        <a-asset-item id="duck-obj" src="https://cdn.glitch.com/d3f3afbb-50dc-4879-ac73-5cc938c7e1e1%2Frubber-duck.obj?1505395860600"></a-asset-item>
+        <a-asset-item id="duck-mtl" src="https://cdn.glitch.com/d3f3afbb-50dc-4879-ac73-5cc938c7e1e1%2Frubber-duck.mtl?1505395859745"></a-asset-item>
+      </a-assets>
+      
+      <!-- This sets up our perspective by positioning the 'camera' we view the scene through. -->
+      <a-entity position="0 0 1">
+        <a-camera>
+          <!-- The cursor shows where we are looking. It lets us make things happen depending on where we're gazing. -->
+          <a-cursor></a-cursor>
+        </a-camera>
+      </a-entity>
+
+      <!-- Step 1: Comment out the following line. Uncomment the next line. -->
+      <a-sky color="#CCC"></a-sky>
+      <!--<a-sky src="https://cdn.glitch.com/d3f3afbb-50dc-4879-ac73-5cc938c7e1e1%2Friver-bobdass.jpg?1505395169356"></a-sky>-->
+     
+      <!-- A couple of objects you should be able to see in the scene: a box and some welcome text. -->
+      
+      <a-text position="-1.2 2.5 -1" value="Welcome to WebVR 101!" color="#FFF"></a-text>
+            
+      <!-- Step 5: Add this attribute to the a-box element: change-color-on-hover="color: yellow" -->
+      <a-box position="0 1.5 -1" rotation="0 45 0" color="#4CC3D9">
+        <!-- Step 2: Uncomment the next line to make the box spin! -->
+        <!--<a-animation attribute="rotation" to="0 360 0" direction="alternate" dur="2000" repeat="indefinite"></a-animation>-->
+      </a-box>
+      
+      <!-- Step 3: Uncomment the next section to add a 3D duck model! -->
+      <!--
+      <a-entity id="duck" position="-60 -12 0" rotation="0 180 2">
+        <a-entity obj-model="obj: #duck-obj; mtl: #duck-mtl" scale="8 8 8"></a-entity>
+        <a-animation attribute="rotation"
+                     direction="alternate"
+                     fill="forwards"
+                     dur="4000"
+                     to="0 180 -3"
+                     repeat="indefinite"></a-animation>
+      </a-entity>
+      -->
+      
+    </a-scene>
+  </body>
+</html>
