@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.rawgit.com/aframevr/aframe/v0.5.0/dist/aframe-master.min.js"></script>
     <script>
-      /* Step 4: Uncomment the following component */
+      /* Building Your Scene Step 4: Uncomment the following component */
       /*
       AFRAME.registerComponent('change-color-on-hover', {
         schema: {
@@ -45,7 +45,7 @@
         </a-camera>
       </a-entity>
 
-      <!-- Step 1: Comment out the following line. Uncomment the next line. -->
+      <!-- Building Your Scene Step 1: Comment out the following line. Uncomment the next line. -->
       <a-sky color="#CCC"></a-sky>
       <!--<a-sky src="https://cdn.glitch.com/d3f3afbb-50dc-4879-ac73-5cc938c7e1e1%2Friver-bobdass.jpg?1505395169356"></a-sky>-->
      
@@ -53,23 +53,15 @@
       
       <a-text position="-1.2 2.5 -1" value="Welcome to WebVR 101!" color="#FFF"></a-text>
             
-      <!-- Step 5: Add this attribute to the a-box element: change-color-on-hover="color: yellow" -->
+      <!-- Building Your Scene Step 5: Add this attribute to the a-box element: change-color-on-hover="color: yellow" -->
       <a-box position="0 1.5 -1" rotation="0 45 0" color="#4CC3D9">
-        <!-- Step 2: Uncomment the next line to make the box spin! -->
+        <!-- Building Your Scene Step 2: Uncomment the next line to make the box spin! -->
         <!--<a-animation attribute="rotation" to="0 360 0" direction="alternate" dur="2000" repeat="indefinite"></a-animation>-->
       </a-box>
       
-      <!-- Step 3: Uncomment the next section to add a 3D duck model! -->
+      <!-- Building Your Scene Step 3: Uncomment the next section to add a 3D duck model! -->
       <!--
-      <a-entity id="duck" position="-60 -12 0" rotation="0 180 2">
-        <a-entity obj-model="obj: #duck-obj; mtl: #duck-mtl" scale="8 8 8"></a-entity>
-        <a-animation attribute="rotation"
-                     direction="alternate"
-                     fill="forwards"
-                     dur="4000"
-                     to="0 180 -3"
-                     repeat="indefinite"></a-animation>
-      </a-entity>
+      <a-entity id="duck" obj-model="obj: #duck-obj; mtl: #duck-mtl" scale="8 8 8" position="-60 -12 0" rotation="0 180 2"></a-entity>
       -->
       
     </a-scene>
