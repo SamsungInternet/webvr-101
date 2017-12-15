@@ -12,7 +12,7 @@ If you have any difficulties or questions at any point, just let us know and we 
 
 1. Click 'Remix this' to make your own version of this project.
 
-1. Click 'Show Live' to see how it looks already. You should some text and a box. 
+1. Click 'Show Live' to see how it looks already. You should see some text and a box. 
 
 1. You can move around the scene with your mouse, keyboard (WASD keys) or trackpad.
 
